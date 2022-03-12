@@ -133,13 +133,3 @@ export const agentsArr = businesses.map(i => ({
     number: i.phoneWork
 }))
 
-export const searchMatcher = () => {
-    document.querySelector("#companySearch").addEventListener("keypress", keyPressEvent => {
-        if (keyPressEvent.charCode === 13) {
-            let searchTerm = document.getElementById("companySearch").value
-            let result = businesses.find(business => business.companyName === searchTerm)
-            
-            return result
-        }
-    })
-}
